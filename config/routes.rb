@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  root to: 'static_pages#index'
+  resources :line_items
+  resources :carts
+  resources :instruments
+  root 'instruments#index'
+  # root to: 'static_pages#index'
   
   get   'about', to: 'static_pages#about'
   get   'contact', to: 'static_pages#contact'

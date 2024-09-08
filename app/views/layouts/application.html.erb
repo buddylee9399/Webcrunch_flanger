@@ -4,12 +4,18 @@
     <%= render 'shared/head' %>
   </head>
 
-  <body>
-    <%= render 'shared/navbar' %>
-    <div class="container">
-      <%= yield %>      
-    </div>
-    <%= render 'shared/footer' %>   
-  </body>
 
+  <body class="<%= yield (:body_class) %>">
+    <%= render 'layouts/messages' %>
+    <%= render 'layouts/nav' %>
+
+    <%= yield(:header) %>
+
+    <div class="container">
+
+      <%= yield %>
+
+    </div>
+
+  </body>
 </html>

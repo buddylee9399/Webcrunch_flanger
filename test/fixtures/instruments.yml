@@ -1,0 +1,44 @@
+# == Schema Information
+#
+# Table name: instruments
+#
+#  id          :integer          not null, primary key
+#  brand       :string
+#  condition   :string
+#  description :text
+#  finish      :string
+#  model       :string
+#  price       :decimal(5, 2)    default(0.0)
+#  title       :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  user_id     :integer          not null
+#
+# Indexes
+#
+#  index_instruments_on_user_id  (user_id)
+#
+# Foreign Keys
+#
+#  user_id  (user_id => users.id)
+#
+
+one:
+  brand: MyString
+  model: MyString
+  description: MyText
+  condition: MyString
+  finish: MyString
+  title: MyString
+  price: 9.99
+  user: one
+
+two:
+  brand: MyString
+  model: MyString
+  description: MyText
+  condition: MyString
+  finish: MyString
+  title: MyString
+  price: 9.99
+  user: two
